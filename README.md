@@ -26,3 +26,5 @@ py -3.12 app.py
 Choose **New contact**, enter a name, and put each phone number, email, social account, or address on its own line. Select **Favorite** before saving to include the contact in the favorites view. Select an existing contact to edit it. The application stores contacts in a per-user SQLite database under `%LOCALAPPDATA%\EE308AddressBook`.
 
 **Export Excel** writes the full address book, including contacts hidden by the favorites filter. To create an import template, export an empty address book. Keep the column names and order, enter phone numbers as text, and use line breaks inside a cell for multiple values. **Import Excel** appends all valid rows as new contacts. Reimporting the same workbook creates additional copies. If a row fails validation, the entire import is rolled back.
+
+See the [user guide](USER_GUIDE.md) for a worked example. Run the Excel exchange tests with `py -3.12 -m unittest -v test_excel`.
