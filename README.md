@@ -1,15 +1,15 @@
-# EE308FZ 通讯录
-双人极限编程作业。截止时间为北京时间 2026-11-17 23:59。
+# EE308FZ Address Book
 
-## 功能清单
-- 收藏联系人并快速查看收藏列表。
-- 为同一个联系人保存多条联系方式。
-- 导出 Excel，每行一个联系人，并能从相同格式导入。
+This pair programming project for EE308FZ Software Engineering focuses on organizing contacts and exchanging address book data through Excel.
 
-## 协作计划（待两位成员确认）
-- 成员一负责联系人编辑、收藏和列表界面。
-- 成员二负责 Excel 导入导出和往返验证。
-- 各自在功能分支开发，通过 Pull Request 审阅后合并。每人用自己的 GitHub 账号提交实际完成的代码。
-- 每位成员记录 PSP 计划和实际用时，保留运行截图、演示视频和 Git 提交记录。
+## Application requirements
 
-[作业要求](https://bbs.csdn.net/topics/620593436) · [代码规范](CODING_STANDARDS.md)
+- Mark contacts as favorites and make them easy to find in the contact list.
+- Store multiple contact details for one person, including phone numbers, email addresses, social media accounts, and postal addresses.
+- Export one row per contact with labeled columns. Import workbooks in the same format and preserve all contact details.
+
+## Responsibilities
+
+The repository owner leads application development and integration. The teammate leads project documentation.
+
+[Assignment brief](https://bbs.csdn.net/topics/620593436) | [Coding standards](CODING_STANDARDS.md)
