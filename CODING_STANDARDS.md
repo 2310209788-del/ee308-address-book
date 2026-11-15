@@ -1,6 +1,17 @@
-# 代码规范
-- 为变量和函数使用能表达用途的名称，保持同一模块的命名风格一致。
-- 让界面、联系人数据处理和 Excel 读写的职责清晰。
-- 导入文件前校验表头与数据，遇到无效记录时提示原因。
-- 使用虚构联系人验证功能，检查包含多条联系方式的数据导出后能完整导入。
-- 每次提交围绕一项改动，提交说明写明完成了什么。
+# Coding Standards
+
+## Application code
+
+- Use descriptive names for contact fields, functions, and interface controls. Follow the naming conventions of the surrounding module.
+- Keep contact storage and Excel conversion separate from interface code so that each can be tested independently.
+
+## Excel handling
+
+- Use the same column names for import and export. Preserve phone numbers as text so that leading zeros and international dialing prefixes survive a round trip.
+- Validate required headers before changing the address book. When a value is invalid, identify the affected row and field in the error message.
+- Use fictional contact details in tests. Verify that a contact with multiple phone numbers and email addresses retains every value after export and import.
+
+## Version control
+
+- Keep each commit focused on one change. Write a short commit message that describes the change.
+- Review the diff before opening a pull request and describe how the change was verified.
