@@ -13,3 +13,16 @@ This pair programming project for EE308FZ Software Engineering focuses on organi
 The repository owner leads application development and integration. The teammate leads project documentation.
 
 [Assignment brief](https://bbs.csdn.net/topics/620593436) | [Coding standards](CODING_STANDARDS.md)
+
+## Run on Windows
+
+Install Python 3.12 with Tcl/Tk support. From the project directory run:
+
+```powershell
+py -3.12 -m pip install -r requirements.txt
+py -3.12 app.py
+```
+
+Choose **New contact**, enter a name, and put each phone number, email, social account, or address on its own line. Select **Favorite** before saving to include the contact in the favorites view. Select an existing contact to edit it. The application stores contacts in a per-user SQLite database under `%LOCALAPPDATA%\EE308AddressBook`.
+
+**Export Excel** writes the full address book, including contacts hidden by the favorites filter. To create an import template, export an empty address book. Keep the column names and order, enter phone numbers as text, and use line breaks inside a cell for multiple values. **Import Excel** appends all valid rows as new contacts. Reimporting the same workbook creates additional copies. If a row fails validation, the entire import is rolled back.
