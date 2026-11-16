@@ -8,6 +8,10 @@ This pair programming project for EE308FZ Software Engineering focuses on organi
 - Store multiple contact details for one person, including phone numbers, email addresses, social media accounts, and postal addresses.
 - Export one row per contact with labeled columns. Import workbooks in the same format and preserve all contact details.
 
+## Find a project teammate
+
+Our campus teams often know who they need by responsibility before they know the person's name. Assign an optional project role and search by name or responsibility. Combine a search such as Testing with Favorites only to find the right contact before a demo. Existing contacts and older six-column workbooks remain compatible.
+
 ## Responsibilities
 
 The repository owner leads application development and integration. The teammate leads project documentation.
