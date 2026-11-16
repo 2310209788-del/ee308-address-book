@@ -52,3 +52,18 @@ class ExcelExchangeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Row 3: Phones"):
             import_excel(self.destination, self.path)
         self.assertEqual(self.destination.execute("SELECT name FROM contacts").fetchall(), [("Existing",)])
+    def test_wrong_header_preserves_existing_contacts(self):
+        save(self.destination, ("Existing", "", "", "", "", 0))
+        save(self.source, ("Incoming", "", "", "", "", 0))
+        export_excel(self.source, self.path)
+        book = load_workbook(self.path)
+        try:
+            book.active["B1"] = "Phone"
+            book.save(self.path)
+        finally:
+            book.close()
+
+        with self.assertRaisesRegex(ValueError, "Expected columns"):
+            import_excel(self.destination, self.path)
+        names = self.destination.execute("SELECT name FROM contacts").fetchall()
+        self.assertEqual(names, [("Existing",)])
